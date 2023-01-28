@@ -14,9 +14,3 @@ int main()
 	testSaldina();
 }
 
-// TTD
-// LEARN HOW TO ORGANIZE CODE, use multiple files
-// make entry point
-// and 2 coursecode classes
-// for starting new class
-// interface / parent for them ? inherit imports ?
