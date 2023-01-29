@@ -25,6 +25,12 @@
     <Filter Include="Header Files\Codecademy">
       <UniqueIdentifier>{0e1115d4-30c2-4c8f-8f5f-5c7db90fb22a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Bucky">
+      <UniqueIdentifier>{5d160a36-d7fd-471a-86b3-2ddbda90cf27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Bucky">
+      <UniqueIdentifier>{e04d4fdf-41a0-4ff6-bb77-5ff595dc0d38}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPP_Learning.cpp">
@@ -47,6 +53,12 @@
     </ClCompile>
     <ClCompile Include="Codecademy\Code\Song_Test.cpp">
       <Filter>Source Files\Codecademy</Filter>
+    </ClCompile>
+    <ClCompile Include="Bucky\Code\Bucky_Test.cpp">
+      <Filter>Source Files\Bucky</Filter>
+    </ClCompile>
+    <ClCompile Include="Bucky\Code\Sentinel.cpp">
+      <Filter>Source Files\Bucky</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +85,12 @@
     </ClInclude>
     <ClInclude Include="Codecademy\Headers\Song_Test.h">
       <Filter>Header Files\Codecademy</Filter>
+    </ClInclude>
+    <ClInclude Include="Bucky\Headers\Bucky_Test.h">
+      <Filter>Header Files\Bucky</Filter>
+    </ClInclude>
+    <ClInclude Include="Bucky\Headers\Sentinel.h">
+      <Filter>Header Files\Bucky</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

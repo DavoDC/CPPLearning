@@ -5,6 +5,7 @@
 #include "CommonHeader.h"
 #include "Saldina/Headers/Test_Script.h"
 #include "Codecademy/Headers/Song_Test.h"
+#include "Bucky/Headers/Bucky_Test.h"
 
 using std::cout;
 
@@ -17,5 +18,8 @@ int main()
 
 	// # 2 - Test adapted Song class from Codecademy
 	//testSong();
+
+	// # 3 - Test Bucky code
+	testBucky();
 }
 

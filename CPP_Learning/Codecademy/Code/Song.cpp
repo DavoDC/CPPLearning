@@ -6,6 +6,9 @@ using std::string;
 using std::cout;
 using std::endl;
 
+// Inspired by Codeacademy class:
+// https://www.codecademy.com/courses/learn-c-plus-plus/lessons/cpp-classes-and-objects/exercises/cpp-class-access-control
+
 // Default Constructor
 Song::Song() {
     title = "Title";

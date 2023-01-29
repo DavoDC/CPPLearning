@@ -128,6 +128,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bucky\Code\Bucky_Test.cpp" />
+    <ClCompile Include="Bucky\Code\Sentinel.cpp" />
     <ClCompile Include="Codecademy\Code\Song.cpp" />
     <ClCompile Include="Codecademy\Code\Song_Test.cpp" />
     <ClCompile Include="CPP_Learning.cpp" />
@@ -137,6 +139,8 @@
     <ClCompile Include="Saldina\Code\Test_Script.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bucky\Headers\Bucky_Test.h" />
+    <ClInclude Include="Bucky\Headers\Sentinel.h" />
     <ClInclude Include="Codecademy\Headers\Song.h" />
     <ClInclude Include="Codecademy\Headers\Song_Test.h" />
     <ClInclude Include="CommonHeader.h" />
