@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Saldina">
       <UniqueIdentifier>{f6797f61-59ed-4277-96b1-f7fcda19acde}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Codecademy">
+      <UniqueIdentifier>{0e74782a-f271-4634-a296-66c2c35ed72e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Codecademy">
+      <UniqueIdentifier>{0e1115d4-30c2-4c8f-8f5f-5c7db90fb22a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPP_Learning.cpp">
@@ -35,6 +41,12 @@
     </ClCompile>
     <ClCompile Include="Saldina\Code\Test_Script.cpp">
       <Filter>Source Files\Saldina</Filter>
+    </ClCompile>
+    <ClCompile Include="Codecademy\Code\Song.cpp">
+      <Filter>Source Files\Codecademy</Filter>
+    </ClCompile>
+    <ClCompile Include="Codecademy\Code\Song_Test.cpp">
+      <Filter>Source Files\Codecademy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="Saldina\Headers\Test_Script.h">
       <Filter>Header Files\Saldina</Filter>
+    </ClInclude>
+    <ClInclude Include="Codecademy\Headers\Song.h">
+      <Filter>Header Files\Codecademy</Filter>
+    </ClInclude>
+    <ClInclude Include="Codecademy\Headers\Song_Test.h">
+      <Filter>Header Files\Codecademy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

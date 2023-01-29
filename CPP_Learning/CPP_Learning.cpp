@@ -4,6 +4,7 @@
 
 #include "CommonHeader.h"
 #include "Saldina/Headers/Test_Script.h"
+#include "Codecademy/Headers/Song_Test.h"
 
 using std::cout;
 
@@ -11,6 +12,10 @@ int main()
 {
 	cout << "\n### Welcome to C++ Testing Ground ###\n";
 
-	testSaldina();
+	// # 1 - Test Saldina classes
+	// testSaldina();
+
+	// # 2 - Test adapted Song class from Codecademy
+	//testSong();
 }
 

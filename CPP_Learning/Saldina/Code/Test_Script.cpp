@@ -49,16 +49,16 @@ void testSaldina()
 	cout << "\n";
 
 	// TESTS
-	cout << "\n# Polymorphic Method Call Tests #";
+	// cout << "\n# Polymorphic Method Call Tests #";
 
 	// TEST 1
-	cout << "\nDirect storage of child in parent variable:";
+	// cout << "\nDirect storage of child in parent variable:";
 	Employee empObjectHolder = teacher;
 	empObjectHolder.PrintSummary();
 	empObjectHolder.Work(); // Doesn't work, uses parent implementation
 
 	// TEST 2
-	cout << "\nStoring child class object refences in parent pointers:\n";
+	// cout << "\nStoring child class object refences in parent pointers:\n";
 	// Employee pointers can hold references to child class objects
 	// Base class pointers that hold derived class objects
 	Employee* empPtr1 = &dev;
@@ -74,7 +74,7 @@ void testSaldina()
 	// with type-specific implementation!
 	for (Employee* curEmpP : employees)
 	{
-		curEmpP->Work(); 
+		// curEmpP->Work(); 
 		// '->' symbol is for accessing members of a pointer
 		// 
 		// Work method must be VIRTUAL IN PARENT for CHILD IMPL to be used!

@@ -1,8 +1,4 @@
 TTD
 
 
-Add song class from notes, remove from notes
-use Codecademy filter
-
-
 Start next course - e.g. bucky

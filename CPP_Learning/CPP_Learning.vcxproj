@@ -128,6 +128,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Codecademy\Code\Song.cpp" />
+    <ClCompile Include="Codecademy\Code\Song_Test.cpp" />
     <ClCompile Include="CPP_Learning.cpp" />
     <ClCompile Include="Saldina\Code\Developer.cpp" />
     <ClCompile Include="Saldina\Code\Employee.cpp" />
@@ -135,6 +137,8 @@
     <ClCompile Include="Saldina\Code\Test_Script.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Codecademy\Headers\Song.h" />
+    <ClInclude Include="Codecademy\Headers\Song_Test.h" />
     <ClInclude Include="CommonHeader.h" />
     <ClInclude Include="Saldina\Headers\Developer.h" />
     <ClInclude Include="Saldina\Headers\Employee.h" />
