@@ -12,9 +12,10 @@ private:
     std::vector<int> ages;
 
     // Private methods/function members
-    int GetAgeSum();
-    int GetNumOfEntries();
-    int GetAverageAge();
+    // (Constant means these won't change the object)
+    int GetAgeSum() const;
+    int GetNumOfEntries() const;
+    int GetAverageAge() const;
 
 public:
 

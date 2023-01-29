@@ -11,7 +11,7 @@ using std::endl;
 
 
 // Private function members
-int Sentinel::GetAgeSum()
+int Sentinel::GetAgeSum() const
 {
 	// Holder
 	int sumHolder = 0;
@@ -34,12 +34,12 @@ int Sentinel::GetAgeSum()
 	return sumHolder;
 }
 
-int Sentinel::GetNumOfEntries()
+int Sentinel::GetNumOfEntries() const
 {
 	return ((int) ages.size());
 }
 
-int Sentinel::GetAverageAge()
+int Sentinel::GetAverageAge() const
 {
 	if (GetNumOfEntries() == 0) {
 		return 0;
@@ -95,4 +95,3 @@ void Sentinel::PrintInfo()
 	cout << "\nCount: " << GetNumOfEntries();
 	cout << "\nAverage: " << GetAverageAge();
 }
-
