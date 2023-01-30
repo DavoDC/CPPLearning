@@ -14,56 +14,50 @@ int tuna = 69;
 
 void testBucky()
 {
-	// ### Sentinel test
+	// ### 1 - Sentinel Test
 	// Sentinel s;
 	// s.GetAgesFromUser();
 	// s.PrintInfo();
-	 
-	// ### Default Parameters
+
+	// ### 2 - Default Parameters Test
 	// DefaultParamTest(50);
 
-	// ### Unary Scope Resolution Operator
+	// ### 3 - Unary Scope Resolution Operator
 	// int tuna = 22;
 	// cout << tuna << endl;
 	// cout << ::tuna << endl;  // '::' means use global instead
 
-	// ### Function Overloading
+	// ### 4 - Function Overloading
 	// PrintNumOverload(5);
 	// PrintNumOverload(2.5);
 
-	// ### Pointers
-	//// Int
-	//int num = 10; 
-	//// A pointer to an int
-	//int* ptr;
-	//// The "address-of operator" (&) gets a pointer to a variable
-	//ptr = &num; 
-	//// Printing a ptr prints an address
-	//cout << "\n> ptr (&num): " << ptr; 
-	//// We can use star to dereference the pointer and get the data
-	//cout << "\n> *ptr: " << *ptr;
-	
-	// ### Pass by Reference
-	int passNum = 23;
-	cout << "\nOriginal: " << passNum;
-	PassByValue(passNum);
-	cout << "\nAfter PassByValue(): " << passNum;
-	PassByReference(&passNum); // Give address as takes ptr
-	cout << "\nAfter PassByReference(): " << passNum;
+	// ### 5 - Pointers
+	// PointersTest();
 
+	// ### 6 - Pass by Value/Reference
+	//int passNum = 23;
+	//cout << "\nOriginal: " << passNum;
+	//PassByValue(passNum);
+	//cout << "\nAfter PassByValue(): " << passNum;
+	//PassByReference(&passNum); // Give address as takes ptr
+	//cout << "\nAfter PassByReference(): " << passNum;
+
+	// ### 7 - Friend Tests
+	//testFriendFunction();
+	// testFriendClasses();
 
 	// End
 	cout << "\n" << endl;
 }
 
 
-// Default 
+// ### 2 - Default Parameters Test
 void DefaultParamTest(int x, int y)
 {
 	cout << std::format("\nx: {}, y: {}, sum: {}", x, y, x + y);
 }
 
-// Function Overloading
+// ### 4 - Function Overloading
 void PrintNumOverload(int x)
 {
 	cout << "\nNumber (int): " << x << endl;
@@ -74,7 +68,27 @@ void PrintNumOverload(double x)
 	cout << "\nNumber (dbl): " << x << endl;
 }
 
-// Pass by Value/Reference
+// ### 5 - Pointers Test
+void PointersTest()
+{
+	// Int
+	int num = 10;
+
+	// A pointer to an int
+	int* ptr;
+
+	// The "address-of operator" (&) gets a pointer to a variable
+	ptr = &num;
+
+	// Printing a ptr prints an address
+	cout << "\n> ptr (&num): " << ptr;
+
+	// We can use star to dereference the pointer and get the data
+	cout << "\n> *ptr: " << *ptr;
+}
+
+
+// ### 6 - Pass by Value/Reference
 void PassByValue(int num)
 {
 	num = num * 3;

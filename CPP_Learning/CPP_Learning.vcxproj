@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="Bucky\Code\Bucky_Test.cpp" />
     <ClCompile Include="Bucky\Code\Sentinel.cpp" />
+    <ClCompile Include="Bucky\Code\Friends.cpp" />
     <ClCompile Include="Codecademy\Code\Song.cpp" />
     <ClCompile Include="Codecademy\Code\Song_Test.cpp" />
     <ClCompile Include="CPP_Learning.cpp" />
@@ -140,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bucky\Headers\Bucky_Test.h" />
+    <ClInclude Include="Bucky\Headers\Friends.h" />
     <ClInclude Include="Bucky\Headers\Sentinel.h" />
     <ClInclude Include="Codecademy\Headers\Song.h" />
     <ClInclude Include="Codecademy\Headers\Song_Test.h" />

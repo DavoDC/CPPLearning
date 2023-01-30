@@ -60,6 +60,9 @@
     <ClCompile Include="Bucky\Code\Sentinel.cpp">
       <Filter>Source Files\Bucky</Filter>
     </ClCompile>
+    <ClCompile Include="Bucky\Code\Friends.cpp">
+      <Filter>Source Files\Bucky</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonHeader.h">
@@ -90,6 +93,9 @@
       <Filter>Header Files\Bucky</Filter>
     </ClInclude>
     <ClInclude Include="Bucky\Headers\Sentinel.h">
+      <Filter>Header Files\Bucky</Filter>
+    </ClInclude>
+    <ClInclude Include="Bucky\Headers\Friends.h">
       <Filter>Header Files\Bucky</Filter>
     </ClInclude>
   </ItemGroup>
