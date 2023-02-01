@@ -12,9 +12,16 @@ using std::endl;
 void testSaldina()
 {
 	// Create objects
+	// PARENT
 	Employee defaultEmp; // Creates object using default constructor
 	Employee emp = Employee("Jimmy McGill (Emp)", "HHM", 55);
+
+	// CHILDREN
+	// When child objects are created, the parent constructor is ran
+	// In the background, the parent object needs to be set up
+	// The constructor isn't really inherited but is used.
 	Developer defaultDev;
+
 	Developer dev = Developer("Dave (Dev)", "ImmT", 23, "C++");
 	Teacher teacher = Teacher("J (Teacher)", "U", 22, "CS");
 

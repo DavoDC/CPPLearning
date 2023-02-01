@@ -34,17 +34,15 @@ void testBucky()
 	// ### 5 - Pointers
 	// PointersTest();
 
-	// ### 6 - Pass by Value/Reference
-	//int passNum = 23;
-	//cout << "\nOriginal: " << passNum;
-	//PassByValue(passNum);
-	//cout << "\nAfter PassByValue(): " << passNum;
-	//PassByReference(&passNum); // Give address as takes ptr
-	//cout << "\nAfter PassByReference(): " << passNum;
+	// ### 6 - Ways to Pass
+	//TestWaysToPass(3);
 
 	// ### 7 - Friend Tests
-	//testFriendFunction();
+	// testFriendFunction();
 	// testFriendClasses();
+
+	// ### 8 - Function Templates
+	testFuncTemplate();
 
 	// End
 	cout << "\n" << endl;
@@ -85,16 +83,88 @@ void PointersTest()
 
 	// We can use star to dereference the pointer and get the data
 	cout << "\n> *ptr: " << *ptr;
+
+	// Declare a float pointer
+	float* pointFloat;
+
+	// Dynamically allocate memory
+	// We use 'NEW' IN C++ to ALLOCATE MEMORY
+	pointFloat = new float;
+
+	// Assign a value to memory space
+	*pointFloat = 45.45f;
+
+	// Print out value
+	cout << *pointFloat << endl;
+
+	// Deallocate the memory
+	// We use 'DELETE' IN C++ to DE-ALLOCATE MEMORY
+	delete pointFloat;
 }
 
 
-// ### 6 - Pass by Value/Reference
+// ### 6 - Ways to Pass
+void TestWaysToPass(int passNum)
+{
+	cout << "\nOriginal: " << passNum;
+
+	// BY VALUE
+	PassByValue(passNum); // Normal
+	cout << "\nAfter PassByValue(): " << passNum;
+
+	// BY REFERENCE
+	PassByReference(passNum); // Normal
+	cout << "\nAfter PassByReference(): " << passNum;
+
+	// BY ADDRESS OR POINTER
+	PassByAddress_or_Pointer(&passNum); // GIVE ADDRESS
+	cout << "\nPassByAddress_or_Pointer(): " << passNum;
+}
+
 void PassByValue(int num)
+{
+	num = num * 2;
+}
+
+void PassByReference(int& num)
 {
 	num = num * 3;
 }
 
-void PassByReference(int* num)
+void PassByAddress_or_Pointer(int* num)
 {
-	*num = *num * 3; // Dereference (*) for assigning + accessing data!
+	// Dereference (*) for assigning + accessing data!
+	*num = *num * 4;
 }
+
+
+
+// ### 8 - Function Templates
+template <class bucky>  // Generic data type
+bucky addAnything(bucky thing1, bucky thing2)
+{
+	return thing1 + thing2;
+}
+
+template <class A, class B>  // Two generic data types
+A smallerOfTwoDiff(A first, B second)
+{
+	return (A) ( first < second ? first : second);
+}
+
+void testFuncTemplate()
+{
+	// Can use with ints and doubles due to template!
+	cout << "\nIntResult: " << addAnything(5, 10);
+	cout << "\nDoubleResult: " << addAnything(2.15, 10.25);
+
+	// Can even use with proper strings! (but not const char*)
+	std::string big = "Big";
+	std::string smoke = "Smoke";
+	cout << "\nStringResult: " << addAnything(big, smoke);
+
+	// Smaller of different types
+	cout << "\nComparison: " << smallerOfTwoDiff(22.25, 10);
+	cout << "\nComparison: " << smallerOfTwoDiff(5.15, 10);
+}
+

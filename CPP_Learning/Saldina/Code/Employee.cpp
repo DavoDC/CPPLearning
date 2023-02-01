@@ -79,7 +79,7 @@ void Employee::setAge(int Age)
 
 
 
-// Satisfies interface
+// Satisfies interface (pure virtual function)
 void Employee::AskForPromotion() {
 	if (Age > 30)
 	{

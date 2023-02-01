@@ -16,5 +16,9 @@ void PrintNumOverload(double x);
 
 void PointersTest();
 
+void TestWaysToPass(int passNum);
 void PassByValue(int num);
-void PassByReference(int* num);
+void PassByReference(int& num);
+void PassByAddress_or_Pointer(int* num);
+
+void testFuncTemplate();
