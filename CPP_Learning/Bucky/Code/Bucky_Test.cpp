@@ -15,9 +15,9 @@ int tuna = 69;
 void testBucky()
 {
 	// ### 1 - Sentinel Test
-	// Sentinel s;
-	// s.GetAgesFromUser();
-	// s.PrintInfo();
+	//Sentinel s;
+	//s.GetAgesFromUser();
+	//s.PrintInfo();
 
 	// ### 2 - Default Parameters Test
 	// DefaultParamTest(50);
@@ -41,8 +41,14 @@ void testBucky()
 	// testFriendFunction();
 	// testFriendClasses();
 
-	// ### 8 - Function Templates
-	testFuncTemplate();
+	// ### 8 - Templates
+	// testTemplates();
+
+	// ### 9 - Exceptions
+	//testExceptions();
+
+	// ### 10 - String Functions
+	testStringFunctions();
 
 	// End
 	cout << "\n" << endl;
@@ -85,11 +91,9 @@ void PointersTest()
 	cout << "\n> *ptr: " << *ptr;
 
 	// Declare a float pointer
-	float* pointFloat;
-
 	// Dynamically allocate memory
 	// We use 'NEW' IN C++ to ALLOCATE MEMORY
-	pointFloat = new float;
+	float* pointFloat = new float;
 
 	// Assign a value to memory space
 	*pointFloat = 45.45f;
@@ -139,7 +143,7 @@ void PassByAddress_or_Pointer(int* num)
 
 
 
-// ### 8 - Function Templates
+// ### 8 - Templates
 template <class bucky>  // Generic data type
 bucky addAnything(bucky thing1, bucky thing2)
 {
@@ -152,7 +156,25 @@ A smallerOfTwoDiff(A first, B second)
 	return (A) ( first < second ? first : second);
 }
 
-void testFuncTemplate()
+// For class that uses templates
+template <class T>
+// IMPORTANT = when definining funcions for a class template,
+// need to put <T> after class name!
+T MagicClass<T>::bigger() {
+	return (num1 > num2 ? num1 : num2);
+}
+
+
+// SPECIALIZED CLASS TEMPLATE
+string MagicClass<char>::getCombo() {
+
+	// Convert to string objects, combine, and return
+	string string1(1, char1);
+	string string2(1, char2);
+	return (string1 + string2);
+}
+
+void testTemplates()
 {
 	// Can use with ints and doubles due to template!
 	cout << "\nIntResult: " << addAnything(5, 10);
@@ -164,7 +186,134 @@ void testFuncTemplate()
 	cout << "\nStringResult: " << addAnything(big, smoke);
 
 	// Smaller of different types
-	cout << "\nComparison: " << smallerOfTwoDiff(22.25, 10);
-	cout << "\nComparison: " << smallerOfTwoDiff(5.15, 10);
+	cout << "\n1_Comparison: " << smallerOfTwoDiff(22.25, 10);
+	cout << "\n2_Comparison: " << smallerOfTwoDiff(5.15, 10);
+
+	// Class that uses template
+	MagicClass m1 = MagicClass(10.1, 20.1);
+	MagicClass<int> m2 = MagicClass(2, 8); // can specify datatype
+	cout << "\n\n1_Bigger(): " << m1.bigger();
+	cout << "\n2_Bigger(): " << m2.bigger();
+
+	// Specialized template class
+	MagicClass m3 = MagicClass('D', 'C');
+	cout << "\n3_getCombo(): " + m3.getCombo(); // can concat since actual string
+	
 }
 
+
+
+
+// ### 9 - Exceptions
+void testExceptions()
+{
+	cout << "\n# Exceptions Test #";
+	try {
+
+		// string username = "dog";
+		string username = "doggy";
+
+		cout << "\nUsername: " + username;
+
+		// If username is too short
+		if (username.length() <= 3)
+		{
+			// Notify and throw error
+			string msg = "Username too short!";
+			throw msg;
+		}
+
+		// If username is all lowercase letters
+		if (all_of(username.begin(), username.end(), islower)) {
+
+			// Notify and throw error
+			string msg = "Username should have a capital letter!";
+			throw msg;
+		}
+	}
+	catch (double example)
+	{
+		// This is to show we can catch any data type!
+		// e..g
+		// catch (char x)
+		// catch (int x)
+	}
+	catch (string x)
+	{
+		cout << "\nErr: " + x;
+	}
+	catch(...)  // ELLIPSIS catches every/anything!
+	{
+		cout << "\nGeneral Error!";
+	}
+
+}
+
+
+// ### 10 - String Functions
+void testStringFunctions()
+{
+	cout << "\n# Common/Useful String Functions (inbuilt/lib) #";
+
+	// Different ways to make strings
+	string normal = "normal string";
+	string diff("diff string");
+	string empty;
+
+
+	// ASSIGN = Copies a string
+	//empty = normal; // valid
+	empty.assign(normal);
+	cout << "\nempty: " + empty;
+
+
+	// LENGTH = Gets string length
+	// AT = Gets character at position
+	cout << "\n";
+	for (int i = 0; i < normal.length(); i++) {
+		cout << normal.at(i) << " ";
+	}
+
+
+	// SUBSTRING (SUBSTR)
+	// Extracts a string fragment
+	// Goes from 2nd spot to 7th spot like normal
+	cout << "\nnormal.substr(2, 7): " + normal.substr(2, 7);
+	// Strange! starts at 10th and moves 3 ahead
+	cout << "\nnormal.substr(15, 1): " + normal.substr(10, 3);
+
+
+	// SWAP = Swaps two strings
+	string a("apple");
+	string b("bean");
+	a.swap(b);
+	cout << "\na: " + a;
+
+
+	// FIND = Finds the position of the start of fragment in a string
+	string hamstring("a ham is spam oh yes i am!");
+	cout << "\n$$$ " + hamstring;
+	// Find goes from start
+	cout << "\nfind('am'): " << hamstring.find("am");
+	// Rfind = REVERSE find
+	cout << "\nrfind('am'): " << hamstring.rfind("am");
+	// Find last of = finds last one
+	cout << "\nfind_last_of('am'): " << hamstring.find_last_of("am");
+
+
+	// ERASE - erases AFTER a certain position
+	hamstring.erase(9);
+	cout << "\n$$$ erase(9): " + hamstring;
+
+
+	// REPLACE - replaces a segment with something else
+	// 1) start pos,   2) length of removal,  3) replacement
+	hamstring.replace(2, 3, "banana");
+	cout << "\n$$$ replace(): " + hamstring;
+
+
+	// INSERT - inserts a string into a certain position
+	// 1) start pos,  2) addition
+	hamstring.insert(hamstring.length(), " ping pong");
+	cout << "\n$$$ insert(): " + hamstring;
+}
