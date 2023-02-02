@@ -18,12 +18,12 @@ int main()
 	cout << "\n### Welcome to C++ Testing Ground ###\n";
 
 	// # 1 - Test Saldina classes
-	// testSaldina();
+	//testSaldina();
 
 	// # 2 - Test adapted Song class from Codecademy
-	// testSong();
+	testSong();
 
 	// # 3 - Test Bucky code
-	testBucky();
+	//testBucky();
 }
 

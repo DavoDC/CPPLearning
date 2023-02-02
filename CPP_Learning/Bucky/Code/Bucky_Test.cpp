@@ -48,7 +48,7 @@ void testBucky()
 	//testExceptions();
 
 	// ### 10 - String Functions
-	testStringFunctions();
+	// testStringFunctions();
 
 	// End
 	cout << "\n" << endl;
