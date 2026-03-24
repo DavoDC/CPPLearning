@@ -1,5 +1,9 @@
 # C++ Learning
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G31WKOCN)
+
+
+
 Code written while learning C++ and object-oriented programming (OOP) - written as preparation for a software engineering role.
 
 ## Contents
